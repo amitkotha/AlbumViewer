@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -13,7 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +27,29 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\albums\component\albumdisplay.ts" />
+    <None Remove="ClientApp\src\app\albums\component\albumList.ts" />
+    <None Remove="ClientApp\src\app\albums\service\albumService.ts" />
+    <None Remove="ClientApp\src\app\common\animations.ts" />
+    <None Remove="ClientApp\src\app\common\entities.ts" />
+    <None Remove="ClientApp\src\app\common\errorDisplay.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlbumViewer.Data\AlbumViewer.Data.csproj" />
+    <ProjectReference Include="..\AlbumViewer.Service\AlbumViewer.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\albums\component\albumDisplay.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\albums\component\albumList.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\albums\service\albumService.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\common\animations.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\common\entities.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\common\errorDisplay.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
