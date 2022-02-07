@@ -116,5 +116,107 @@
                 "UnitPrice": 0.00
             }
         ]
+    },
+    {
+        "Id": 3,
+        "Title": "Aenema",
+        "Description": "With its heavy-duty distortion, weighty rhythms, and cynical lyrics, Tool is a heavy metal band for the '90s. Rather like Metallica circa ...And Justice for All, the sound is focused heavily on texture, with vocals and guitars layered one atop the other, and heart-pounding drums underlying everything. There's not a whole lot of variety on Tool's second full-length album--most of the songs start off fairly low-key, kicking into high gear for the chorus, and repeat--but Maynard James Keenan's distinctive voice, the prog-rock stylings over a heavy metal base, and a supremely unhealthy dose of vitriol make this the perfect album to bang your head to.",
+        "Year": 1996,
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/51RpKf9APDL._SL250_.jpg",
+        "AmazonUrl": "https://www.amazon.com/gp/product/B00000099Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00000099Y&linkCode=as2&tag=westwindtechn-20&linkId=333T3S6PUBB3SSZH",
+        "SpotifyUrl": "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",
+        "ArtistId": 3,
+        "Artist": {
+            "Id": 3,
+            "ArtistName": "Tool",
+            "Description": "Tool's greatest breakthrough was to meld dark underground metal with the ambition of art rock. Although Metallica wrote their multi-sectioned, layered songs as if they were composers, they kept their musical attack ferociously at street level. Tool didn't. They embraced the artsy, bohemian preoccupations of Jane's Addiction while they simultaneously paid musical homage to the relentlessly bleak visions of grindcore, death metal, and thrash. Even with their post-punk influences, they executed their music with the aesthetic of prog rock, alternating between long, detailed instrumental interludes and lyrical rants in their songs.\r\n\r\nUndertowTool had a knack for conveying the strangled, oppressive angst that the alternative nation of the early '90s claimed as its own. So, Tool were able to slip into the definition of alternative rock during the post-Nirvana era, landing a slot on the third Lollapalooza tour in 1993, which helped their first full-length debut album, Undertow, rocket to platinum status. By the time the band delivered its belated follow-up, Ænima, in 1996, alternative rock had lost its grip on the mainstream of America, and Tool's audience had shaped up as essentially metal-oriented, which meant that the group and the record didn't capture as big an audience as their first album, despite debuting at number two on the charts. After a co-headlining slot with Korn on Lollapalooza '97 wrapped up, Tool remained on the road, supporting Ænima until well into the next year.",
+            "ImageUrl": "https://cps-static.rovicorp.com/3/JPG_400/MI0003/371/MI0003371431.jpg?partner=allrovi.com",
+            "AmazonUrl": ""
+        },
+        "Tracks": [
+            {
+                "Id": 11,
+                "AlbumId": 3,
+                "SongName": "Stinkfirstr",
+                "Length": "0:00",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 12,
+                "AlbumId": 3,
+                "SongName": "Eulogy",
+                "Length": "0:00",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 13,
+                "AlbumId": 3,
+                "SongName": "H.",
+                "Length": "0:00",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 14,
+                "AlbumId": 3,
+                "SongName": "Useful Idiot",
+                "Length": "0:00",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 15,
+                "AlbumId": 3,
+                "SongName": "Forty size and 2",
+                "Length": "0:00",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            }
+        ]
+    },
+    {
+        "Id": 4,
+        "Title": "Alchemy index, Vols. 3-4",
+        "Description": "Post-hardcore foursome Thrice seems to revel in pushing boundaries and overturning expectations. The second two-disc installment of THE ALCHEMY INDEX answers VOLS. 1 & 2 (FIRE & WATER) from the first set with VOLS. 3 & 4 (EARTH & AIR). There’s little evidence of the ferocious screamo aesthetic that characterized releases like THE ILLUSION OF SAFETY; instead AIR & EARTH ventures into mostly acoustic, highly melodic territory. The tight, technically complex instrumental prowess of the band is still on display, but the mood is much more atmospheric. The songs veer from ethereal and psychedelic to a more conventional folk or singer-songwriter vein (this is especially true of the tracks on the EARTH disc), but the whole adds up to an impressive, original showing from one of the genre’s innovators.",
+        "Year": 2008,
+        "ImageUrl": "https://images-na.ssl-images-amazon.com/images/I/61AY91dfLAL._SL250_.jpg",
+        "AmazonUrl": "https://www.amazon.com/gp/product/B0015FS8QC/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0015FS8QC&linkCode=as2&tag=westwindtechn-20&linkId=2JW432WUQFTHXXBH",
+        "SpotifyUrl": "https://play.spotify.com/album/2FNlKycIizpYWMID16RMzO",
+        "ArtistId": 4,
+        "Artist": {
+            "Id": 4,
+            "ArtistName": "Thrice",
+            "Description": "Thrice is an American rock band from Irvine, California, formed in 1998. The group was founded by guitarist/vocalist Dustin Kensrue and guitarist Teppei Teranishi while they were in high school.[1]\r\n\r\nEarly in their career, the band was known for fast, hard music based in heavily distorted guitars, prominent lead guitar lines, and frequent changes in complex time signatures.[2] This style is exemplified on their second album, The Illusion of Safety (2002) and their third album The Artist in the Ambulance (2003). Their fourth album Vheissu (2005) made significant changes by incorporating electronic beats, keyboards, and more experimental and nuanced songwriting.[3][4] Their fifth effort was a double album entitled The Alchemy Index (2007/2008), released as two sets of two CDs that together make a 4-part, 24-song cycle. Each of the four 6-song EPs of the Alchemy Index features significantly different styles, based on different aspects of the band's musical aesthetic which reflect the elemental themes of fire, water, air and earth, both lyrically and musically.[5] The band's sixth album, entitled Beggars, was released on August 11, 2009, and their seventh, Major/Minor on September 20, 2011. The most recent albums feature a refined combination of the band's different experiments and explorations.",
+            "ImageUrl": "https://www.bucketlistmusicreviews.com/wp-content/uploads/2017/12/DSC8383-Thrice-678x381.jpg",
+            "AmazonUrl": ""
+        },
+        "Tracks": [
+            {
+                "Id": 16,
+                "AlbumId": 4,
+                "SongName": "Broken Lungs",
+                "Length": "4:14",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 17,
+                "AlbumId": 4,
+                "SongName": "The Sky is falling",
+                "Length": "4:21",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            },
+            {
+                "Id": 18,
+                "AlbumId": 4,
+                "SongName": "Moving Mountains",
+                "Length": "2:55",
+                "Bytes": 0,
+                "UnitPrice": 0.00
+            }
+        ]
     }
     ]
