@@ -31,6 +31,7 @@ This is a sample ASP.NET core application which uses Angular as Frontend. This c
 
 3. Then change the directory to AlbumViewer and run below command
     ```
+   cd AlbumViewer
    dotnet run
    ```
 ![image](https://user-images.githubusercontent.com/12517925/152789529-f95b41ce-3e05-4b3e-99da-a244e47c78d2.png)
