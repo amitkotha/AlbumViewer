@@ -13,5 +13,6 @@ namespace AlbumViewer.Data.Repository
         Task<Album> SaveAlbum(Album postedAlbum);
 
         Task<bool> DeleteAlbum(int id, bool noSaveChanges = false);
+        Task<Album> UpdateAlbum(Album album, int id);
     }
 }

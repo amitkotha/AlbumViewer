@@ -26,7 +26,7 @@ export class AlbumDisplay implements OnInit {
     this.aniFrame = 'in';
 
     //console.log("AlbumDisplay");
-    if (!this.album.Title) {
+    if (!this.album.title) {
       var id = this.route.snapshot.params["id"];
       if (id < 1)
         return;
@@ -46,7 +46,7 @@ export class AlbumDisplay implements OnInit {
   deleteAlbum(album) {
     this.albumService.deleteAlbum(album)
       .subscribe(result => {
-        this.error.info("Album '" + album.Title + "' has been deleted.");
+        this.error.info("Album '" + album.title + "' has been deleted.");
         setTimeout(() => this.router.navigate(["/albums"]), 1500);
       },
         (err) => this.error.error(err));

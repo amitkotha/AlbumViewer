@@ -26,7 +26,6 @@ export class AlbumList implements OnInit {
   ngOnInit() {
     this.getAlbums();
 
-    // ??? Non-DOM way to do this?
     setTimeout(() => {
       $("#SearchBox").focus();
     }, 200);
@@ -39,7 +38,8 @@ export class AlbumList implements OnInit {
       .subscribe(albums => {
         this.albumList = albums;
         this.busy = false;
-
+        console.log(albums);
+        console.log(this.albumList);
         // reset to last scroll position of the list
         setTimeout(() => $("#MainView").scrollTop(this.albumService.listScrollPos), 100);
       }, err => {
@@ -55,7 +55,7 @@ export class AlbumList implements OnInit {
     // save scroll position before navigation
     this.albumService.listScrollPos = $("#MainView").scrollTop();
 
-    this.router.navigate(['/album', album.Id]);
+    this.router.navigate(['/album', album.id]);
   }
 
 

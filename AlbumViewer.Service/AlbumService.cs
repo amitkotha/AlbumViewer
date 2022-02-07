@@ -3,6 +3,8 @@ using AlbumViewer.Data.Repository;
 using AlbumViewer.Service.DTO;
 using AlbumViewer.Service.Interfaces;
 using AutoMapper;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AlbumViewer.Service
@@ -22,14 +24,22 @@ namespace AlbumViewer.Service
             return await _albumRepository.DeleteAlbum(id);
         }
 
-        public async Task<AlbumResponseDTO> GetAllAlbums(int page, int pageSize)
+        public async Task<List<AlbumResponseDTO>> GetAllAlbums(int page, int pageSize)
         {
-            var albums = await _albumRepository.GetAllAlbums(page, pageSize);
-            if (albums != null)
+            try
             {
-                return _mapper.Map<AlbumResponseDTO>(albums);
+                var albums = await _albumRepository.GetAllAlbums(page, pageSize);
+                if (albums != null)
+                {
+
+                    return _mapper.Map<List<Album>, List<AlbumResponseDTO>>(albums);
+                }
+                return null;
             }
-            return null;
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
         public async Task<AlbumResponseDTO> Load(int id)
@@ -42,6 +52,13 @@ namespace AlbumViewer.Service
         {
             var album = _mapper.Map<Album>(postedAlbum);
             var albumResponse = await _albumRepository.SaveAlbum(album);
+            return _mapper.Map<AlbumResponseDTO>(albumResponse);
+        }
+
+        public async Task<AlbumResponseDTO> UpdateAlbum(AlbumRequestDTO postedAlbum,int Id)
+        {
+            var album = _mapper.Map<Album>(postedAlbum);
+            var albumResponse = await _albumRepository.UpdateAlbum(album,Id);
             return _mapper.Map<AlbumResponseDTO>(albumResponse);
         }
     }

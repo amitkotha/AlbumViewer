@@ -1,16 +1,19 @@
 using AlbumViewer.Data.Context;
 using AlbumViewer.Data.Repository;
+using AlbumViewer.Middleware;
 using AlbumViewer.Service;
 using AlbumViewer.Service.Interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using System;
+using System.IO;
 
 namespace AlbumViewer
 {
@@ -37,7 +40,16 @@ namespace AlbumViewer
                options.UseSqlite("Data Source=Database.db"));
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AllowNullCollections = true;
 
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Album API", Version = "v1" });
+            });
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
@@ -57,7 +69,7 @@ namespace AlbumViewer
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IServiceProvider service, IMapper mapper)
         {
             if (env.IsDevelopment())
             {
@@ -69,7 +81,12 @@ namespace AlbumViewer
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseMiddleware<ExceptionMiddleware>();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Album API");
+            });
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             if (!env.IsDevelopment())
@@ -98,6 +115,8 @@ namespace AlbumViewer
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            var albumContext =service.GetService<AlbumDbContext>();
+            AlbumViewerDataImporter.EnsureAlbumData(albumContext, Path.Combine(env.WebRootPath, "album.js"));
         }
     }
 }

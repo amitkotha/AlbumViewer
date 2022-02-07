@@ -59,6 +59,30 @@ namespace AlbumViewer.Controllers
             return CreatedAtAction("Get", new { id = album.Id }, postedAlbum);
         }
 
+        /// <summary>
+        /// Update or add a new album
+        /// </summary>
+        /// <param name="postedAlbum"></param>
+        /// <returns></returns>
+        /// <exception cref="ApiException"></exception>
+        [HttpPut("api/album/{id:int}")]
+        public async Task<IActionResult> Put(int id,[FromBody] AlbumRequestDTO postedAlbum)
+        {
+            if (postedAlbum == null)
+            {
+                return BadRequest();
+            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var exisitngAlbumRecord = await _albumService.Load(id);
+            if (exisitngAlbumRecord == null)
+            {
+                return NotFound($"Album with ID= {id} not found");
+            }
+            var album = await _albumService.UpdateAlbum(postedAlbum,id);
+            return CreatedAtAction("Get", new { id = album.Id }, postedAlbum);
+        }
+
 
         /// <summary>
         /// Delete a specific album by id

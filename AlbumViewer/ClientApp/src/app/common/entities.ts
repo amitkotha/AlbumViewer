@@ -3,17 +3,17 @@ declare var $: any;
 
 @Injectable()
 export class Album {
-  Id: number = 0;
-  ArtistId: number = 0;
-  Title: string = null;
-  Description: string = null;
-  Year: number = 0;
-  ImageUrl: string = null;
-  AmazonUrl: string = null;
-  SpotifyUrl: string = null;
+  id: number = 0;
+  artistId: number = 0;
+  title: string = null;
+  description: string = null;
+  year: number = 0;
+  imageUrl: string = null;
+  amazonUrl: string = null;
+  spotifyUrl: string = null;
 
   Artist: Artist = new Artist();
-  Tracks: Track[] = [];
+  tracks: Track[] = [];
 }
 
 @Injectable({
@@ -21,11 +21,11 @@ export class Album {
 })
 export class Artist {
   Id: number = 0;
-  ArtistName: string = null;
-  Description: string = null;
-  ImageUrl: string = null;
-  AmazonUrl: string = null;
-  AlbumCount: number = 0;
+  artistName: string = null;
+  description: string = null;
+  imageUrl: string = null;
+  amazonUrl: string = null;
+  albumCount: number = 0;
   Albums: Album[] = [];
 }
 
@@ -41,10 +41,10 @@ export class ArtistResult {
   providedIn: 'root'
 })
 export class Track {
-  Id: number = 0;
-  AlbumId: number = 0;
-  SongName: string = null;
-  Length: string = null;
-  Bytes: number = 0;
-  UnitPrice: number = 0;
+  id: number = 0;
+  albumId: number = 0;
+  songName: string = null;
+  length: string = null;
+  bytes: number = 0;
+  unitPrice: number = 0;
 }

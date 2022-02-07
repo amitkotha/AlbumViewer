@@ -47,14 +47,14 @@ export class AlbumService {
     return this.album;
   }
 
-  saveAlbum(album): Observable<any> {
-    return this.httpClient.post<Album>("api/album",
+  updateAlbum(album): Observable<any> {
+    return this.httpClient.put<Album>("api/album" + "/" + album.id,
       album)
       .pipe(map(album => {
         this.album = album;
 
         // explicitly update the list with the updated data
-        this.updateAlbum(this.album);
+        this.update(this.album);
         return this.album;
       }),
         catchError(new ErrorInfo().parseObservableResponseError)
@@ -62,7 +62,7 @@ export class AlbumService {
   }
 
   deleteAlbum(album: Album): Observable<any> {
-    return this.httpClient.delete<boolean>("api/album"+"/"+album.Id)
+    return this.httpClient.delete<boolean>("api/album"+"/"+album.id)
       .pipe(
         map(result => {
           if (result)
@@ -79,15 +79,15 @@ export class AlbumService {
    * removing 0 entries.
    * @param album  - the album to update
    */
-  updateAlbum(album) {
-    var i = this.albumList.findIndex((a) => (a.Id == album.Id));
+  update(album) {
+    var i = this.albumList.findIndex((a) => (a.id == album.id));
     if (i > -1)
       this.albumList[i] = album;
     else {
       this.albumList.push(album);
       this.albumList.sort((a: Album, b: Album) => {
-        var aTitle = a.Title.toLocaleLowerCase();
-        var bTitle = b.Title.toLocaleLowerCase();
+        var aTitle = a.title.toLocaleLowerCase();
+        var bTitle = b.title.toLocaleLowerCase();
         if (aTitle > bTitle)
           return 1;
         if (aTitle < bTitle)
@@ -96,21 +96,21 @@ export class AlbumService {
       })
     }
 
-    this.albumList = this.albumList.filter((a) => a.Id != 0);
+    this.albumList = this.albumList.filter((a) => a.id != 0);
   }
 
   removeAlbum(album) {
-    this.albumList = this.albumList.filter((a) => a.Id != album.Id);
+    this.albumList = this.albumList.filter((a) => a.id != album.Id);
   }
 
   addSong(track: Track) {
-    this.album.Tracks.push(track);
+    this.album.tracks.push(track);
   }
 
   removeSong(track: Track) {
-    var idx = this.album.Tracks.findIndex((t) => track.Id == t.Id);
+    var idx = this.album.tracks.findIndex((t) => track.id == t.id);
     if (idx > -1)
-      this.album.Tracks.splice(idx, 1);
+      this.album.tracks.splice(idx, 1);
   }
 
 

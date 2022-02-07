@@ -8,10 +8,12 @@ namespace AlbumViewer.Service.Mapper
     {
         public AutoMapperProfile()
         {
-            CreateMap<AlbumResponseDTO, Album>();
-            CreateMap<TrackDTO, Track>();
-            CreateMap<ArtistDTO, Artist>();
-            CreateMap<AlbumResponseDTO, Album>();
+           
+            CreateMap<AlbumResponseDTO, Album>().ReverseMap().ValidateMemberList(MemberList.None);
+            CreateMap<TrackDTO, Track>().ReverseMap().ValidateMemberList(MemberList.None);       
+            CreateMap<Artist, ArtistDTO>().ReverseMap().ValidateMemberList(MemberList.None);
+            CreateMap<AlbumRequestDTO, Album>().ReverseMap().ValidateMemberList(MemberList.None);
+           
         }
         
     }

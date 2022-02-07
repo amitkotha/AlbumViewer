@@ -10,7 +10,12 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { AlbumDisplay } from './albums/component/albumdisplay';
+import { AlbumList } from './albums/component/albumList';
+import { AlbumEditor } from './albums/component/albumEditor';
+import { AlbumSongList } from "./albums/component/albumSongList";
 import { ErrorDisplay, ErrorInfo } from './common/errorDisplay';
+
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +24,21 @@ import { ErrorDisplay, ErrorInfo } from './common/errorDisplay';
     CounterComponent,
     FetchDataComponent,
     AlbumDisplay,
-    ErrorDisplay
+    AlbumList,
+    ErrorDisplay,
+    AlbumEditor,
+    AlbumSongList
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    AngularFontAwesomeModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: AlbumList, pathMatch: 'full' },
+      { path: 'albums', component: AlbumList },
       { path: 'album/:id', component: AlbumDisplay },
+      { path: 'album/edit/:id', component: AlbumEditor },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
