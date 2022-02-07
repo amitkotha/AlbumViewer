@@ -11,3 +11,4 @@ This is a sample ASP.NET core application which uses Angular as Frontend.
 
 # Sample Screen
 
+![image](https://user-images.githubusercontent.com/12517925/152788137-da293ca3-aa6f-4787-897c-e89221423387.png)
